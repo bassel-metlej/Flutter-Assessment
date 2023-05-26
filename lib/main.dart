@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_assessment/screens/nfts.dart';
 
 void main() {
   runApp(const MyApp());
@@ -11,7 +12,15 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-        // home: const MyHomePage(title: 'Flutter Demo Home Page'),
-        );
+      theme: ThemeData.dark().copyWith(
+        useMaterial3: true,
+        colorScheme: ColorScheme.fromSwatch(
+          primarySwatch: Colors.cyan,
+          brightness: Brightness.dark,
+          backgroundColor: const Color.fromARGB(255, 50, 58, 60),
+        ),
+      ),
+      home: NftsListScreen(),
+    );
   }
 }
